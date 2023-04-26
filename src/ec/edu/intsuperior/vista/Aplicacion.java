@@ -16,7 +16,7 @@ public class Aplicacion {
     static Scanner leer= new Scanner(System.in);
     
     public static void main(String[] args) {
-               Aplicacion.metodo3();
+               Aplicacion.adivinarNumero();
         
     }
     
@@ -43,4 +43,19 @@ public class Aplicacion {
             i++;
         }while(i<=5);
     }
+    
+    public static void adivinarNumero(){
+        int n=(int)(Math.random()*10);
+        int adivina;
+        do{
+        System.out.println(n+"ingresa un numero para ver si adivinas");
+         adivina=leer.nextInt();
+        if (adivina==n) {
+            System.out.println("Felicidades ganaste");
+        } else {
+            System.out.println("Intenta de nuevo");
+        }
+        }while(adivina!=n);
+    }
+    
 }
